@@ -1,0 +1,1009 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #F0F0F0;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+header img {
+    width: 1.875rem;
+    margin-right: 0.625rem;
+}
+
+header span {
+    font-family: Sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 1.25rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+#navlink {
+    padding-top: 0.6875rem;
+    font-size: 1.3rem;
+}
+
+/* Buttons */
+.login-btn, .register-btn {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    border: 0.0625rem solid #007bff;
+}
+
+.login-btn {
+    background-color: white;
+    color: #007bff;
+}
+
+.register-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.register-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Hamburger menu styles */
+.menu-toggle {
+    display: none;
+    font-size: 1.875rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 4.375rem;
+        left: 0;
+        background-color: #F0F0F0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    nav ul.open {
+        height: 12.5rem;
+    }
+
+    nav li {
+        margin: 0.625rem 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('./assets/background.avif');
+    background-size: cover;
+    background-position: center;
+    height: 38.75rem; /* Default height for larger screens */
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem; /* Add padding for smaller screens */
+    box-sizing: border-box; /* Include padding in the height calculation */
+}
+
+.hero-content {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.375rem; /* Default font size for larger screens */
+    text-align: center;
+    color: #fff;
+    max-width: 90%; /* Ensure content fits within smaller screens */
+}
+
+.hero-content h1 {
+    margin-bottom: 1.25rem;
+}
+
+.hero-content button {
+    font-size: 1.125rem; /* Default font size for larger screens */
+    font-weight: 150;
+    height: 3.125rem;
+    width: 9.375rem; /* Default width for larger screens */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5625rem;
+    cursor: pointer;
+}
+
+/* Media Query for Smaller Screens */
+@media only screen and (max-width: 768px) { /* Adjust the breakpoint as necessary */
+    .hero {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+
+    .hero-content {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Smaller heading size for better fit */
+    }
+
+    .hero-content button {
+        width: 100%; /* Make the button width full for smaller screens */
+        padding: 0.625rem; /* Optional: Adjust padding for smaller screens */
+        font-size: 1rem; /* Optional: Adjust font size for smaller screens */
+        margin-top: 1rem; /* Space between the button and text */
+    }
+}
+
+
+/* Section 2 */
+#section2H {
+    margin: 3.75rem;
+    font-size: 4rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.card {
+    background-color: white;
+    margin-left: 1.25rem; /* Reduced left margin for a wider card effect */
+    padding: 0.9375rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for depth */
+}
+
+.card h2 {
+    font-size: 2rem;
+}
+
+.card p {
+    font-size: 1.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card button {
+    margin: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.4375rem;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .card {
+        width: calc(100% - 2.5rem); /* Make cards wider but maintain padding */
+        margin: 0.625rem auto; /* Center cards with automatic left and right margin */
+    }
+}
+
+#bgdiv {
+    margin: 0; /* Remove margin to prevent spacing on sides */
+    width: 100%; /* Set width to 100% to fill the screen */
+    background-color: #F0F0F0;
+    height: 4.375rem;
+}
+
+/* Section 3 */
+#imgHs {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#imgHs h1 {
+    padding: 1.875rem;
+    margin-left: 10%;
+    font-size: 3.1rem;
+    font-weight: 270;
+}
+
+#imgHs p {
+    padding-bottom: 1.25rem;
+    text-align: center;
+    margin-left: 8.75%;
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.textImg3 main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+.text-container {
+    padding-left: 1.875rem;
+    flex: 1;
+}
+
+.text-container h2 {
+    padding-left: 1.875rem;
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+.text-container p {
+    padding-right: 1.875rem;
+    margin-left: 1.875rem;
+    margin-right: 1.4375rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+.textImg3 img {
+    height: 42.5rem; /* Default height for larger screens */
+    width: 50%; /* Default width for larger screens */
+}
+
+/* Media Query for Smaller Screens */
+@media only screen and (max-width: 768px) { /* Adjust this breakpoint as needed */
+    .textImg3 img {
+        height: auto; /* Allow height to adjust automatically */
+        width: 100%; /* Set width to full for smaller screens */
+        aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+        max-height: 42.5rem; /* Set a max height to maintain size */
+        object-fit: cover; /* Ensure the image covers the square */
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .textImg3 main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textImg3 img {
+        max-width: 100%;
+        margin-top: 1.25rem;
+    }
+}
+
+/* Card container */
+.#cmpdiv {
+    margin: 3.125rem;
+    margin-bottom: 6.25rem;
+}
+
+#header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 4.375rem;
+    justify-content: center;
+    padding: 1.875rem;
+    text-align: center;
+    padding: 1.25rem;
+}
+
+#header h1 {
+    margin: 1.875rem;
+    font-size: 3rem; /* Large font size */
+    font-weight: 300;
+}
+
+#header p {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    font-size: 2rem; /* Large font size */
+    font-weight: 300;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) { /* Adjust this breakpoint as needed */
+    #header h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+
+    #header p {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        margin-left: 1.25rem; /* Adjust margins for smaller screens */
+        margin-right: 1.25rem; /* Adjust margins for smaller screens */
+    }
+
+    .#cmpdiv {
+        margin: 1.5rem; /* Optional: Reduce margins for smaller screens */
+    }
+}
+
+.card-container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards in a row for larger screens */
+    gap: 1.25rem; /* Space between the cards */
+}
+
+.card-container2 .card {
+    text-align: center;
+    border: 0.0625rem solid #ccc; /* Card border */
+    background-color: #f0f0f0; /* Card background color */
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2); /* Card shadow */
+}
+
+.card-container2 .card img {
+    margin: 0; /* No margin for images */
+    max-width: 100%; /* Responsive image */
+    margin-bottom: 0.625rem; /* Space below the image */
+}
+
+.card-container2 .card p {
+    font-size: 1.2rem; /* Font size for paragraph */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family */
+    justify-content: flex-start; /* Alignment of text */
+}
+
+/* Media Query for Smaller Screens */
+@media only screen and (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .card-container2 {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+    }
+}
+
+
+/* Form Section */
+.formsection {
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.formsection h2 {
+    font-size: 3.8rem; /* Large screen font size */
+    margin-bottom: 1.875rem;
+}
+
+.formsection p {
+    margin-left: 9rem; /* You may want to adjust this in smaller screens */
+    font-size: 2.4rem; /* Large screen font size */
+    margin-bottom: 2.5rem;
+}
+
+/* Media Query for Smaller Screens */
+@media only screen and (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .formsection h2 {
+        font-size: 2.5rem; /* Smaller font size for h2 on mobile */
+    }
+
+    .formsection p {
+        margin-left: 1.5rem; /* Adjust left margin for better alignment on mobile */
+        font-size: 1.5rem; /* Smaller font size for p on mobile */
+    }
+}
+
+
+form {
+    width: 100%;
+    max-width: 37.5rem;
+    height: 23.125rem;
+    margin: 0 auto;
+    border: 0.0625rem solid black;
+    padding: 1.25rem;
+}
+
+form h1 {
+    margin: 1.25rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: left;
+}
+
+.input-group {
+    display: flex;
+    margin: 1.25rem;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 0.6125rem;
+    margin-bottom: 0.425rem;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.3125rem;
+}
+
+.input-group input:not(:last-child) {
+    margin-right: 0.625rem;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) { /* You can adjust this breakpoint as needed */
+    .input-group {
+        flex-direction: column; /* Stack input fields vertically */
+        margin: 0; /* Adjust margin if necessary */
+    }
+
+    .input-group input {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 0.625rem; /* Add bottom margin for spacing */
+    }
+}
+
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.9375rem 1.875rem;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 1.25rem; /* 20px */
+    }
+
+    form {
+        max-width: 100%;
+    }
+}
+
+/* Footer Design */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1.25rem; /* 20px */
+    clear: both; /* Ensure footer clears any floated elements above it */
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.footer-logo {
+    display: flex;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 3.125rem; /* 50px */
+    height: 3.125rem; /* 50px */
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+.footer-nav-list {
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    list-style: none;
+}
+
+.footer-nav-list li {
+    padding: 0; /* Reset padding */
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+.footer-nav-list a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-nav-list a:hover {
+    color: #007bff;
+}
+
+.footer-buttons {
+    text-align: right;
+}
+
+.register-btn, .login-btn {
+    display: block;
+    margin-bottom: 0.625rem; /* 10px */
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    border-radius: 0.3125rem; /* 5px */
+    cursor: pointer;
+}
+
+.register-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.login-btn {
+    background-color: #fff;
+    color: #007bff;
+    border: 0.0625rem solid #007bff; /* 1px */
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.25rem; /* 20px */
+}
+
+.footer-social {
+    display: flex;
+}
+
+.footer-social a {
+    margin-right: 0.625rem; /* 10px */
+    color: #fff;
+    font-size: 1.125rem; /* 18px */
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    color: #007bff;
+}
+
+/* Media Query for Mobile and Tablet Devices */
+@media only screen and (max-width: 768px) {
+    .footer-top, .footer-bottom {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the left */
+        text-align: left; /* Left-align text */
+    }
+
+    .footer-nav-list {
+        margin: 0; /* Reset margin */
+        padding: 0; /* Reset padding */
+    }
+
+    .footer-nav-list li {
+        padding: 0; /* Reset padding */
+        margin-bottom: 0.3125rem; /* Adjust margin for better spacing */
+    }
+
+    .footer-buttons {
+        text-align: left; /* Align buttons to the left */
+        margin-top: 0.625rem; /* Add margin for spacing */
+        width: 100%; /* Full width for buttons container */
+    }
+    
+    .register-btn, .login-btn {
+        width: 100%; /* Make buttons full width */
+        padding: 0.625rem; /* Adjust padding */
+        margin-top: 0.3125rem; /* Add margin for spacing */
+    }
+
+    /* Add styling for text content to appear to the left of buttons */
+    .footer-top .footer-nav-list,
+    .footer-buttons {
+        display: flex; /* Use flexbox for alignment */
+        flex-direction: row; /* Align items horizontally */
+        justify-content: space-between; /* Space between text and buttons */
+        width: 100%; /* Ensure full width */
+        align-items: center; /* Center items vertically */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav-list {
+        margin-bottom: 1.25rem; /* 20px */
+    }
+}
+
+/* Media Query for screens smaller than 768px (Tablets and smaller devices) */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 4.375rem; /* 70px */
+        left: 0;
+        background-color: #F0F0F0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    nav ul.open {
+        height: 12.5rem; /* 200px */
+    }
+
+    nav li {
+        margin: 0.625rem 0; /* 10px 0 */
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 25rem; /* 400px */
+    }
+
+    .hero-content {
+        font-size: 1.5rem;
+    }
+
+    .hero-content button {
+        width: 7.5rem; /* 120px */
+        height: 2.5rem; /* 40px */
+    }
+
+    /* Section 2 */
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    #section2H {
+        font-size: 1.125rem; /* 1.8rem */
+        text-align: center;
+    }
+
+    .card {
+        margin-bottom: 1.25rem; /* 20px */
+    }
+
+    /* Section 3 */
+    .textImg3 main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-container {
+        padding: 0.625rem; /* 10px */
+    }
+
+    .text-container h2 {
+        font-size: 1.5rem;
+    }
+
+    #imgHs p {
+        font-size: 1.125rem; /* 1.2rem */
+    }
+
+    /* Form Section */
+    form {
+        padding: 0.625rem; /* 10px */
+    }
+
+    .formsection h2 {
+        font-size: 2rem;
+    }
+
+    /* Footer */
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav-list li {
+        padding: 0.3125rem; /* 5px */
+    }
+
+    .footer-social a {
+        font-size: 1.125rem; /* 18px */
+    }
+}
+
+/* Media Query for screens smaller than 576px (Small devices like phones) */
+@media (max-width: 576px) {
+
+    /* Hero Section */
+    .hero-content {
+        font-size: 1.2rem;
+    }
+
+    .hero-content button {
+        width: 6.25rem; /* 100px */
+        height: 2.1875rem; /* 35px */
+    }
+
+    /* Section 2 */
+    #section2H {
+        font-size: 1.5rem;
+    }
+
+    .card h2 {
+        font-size: 1.6rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+
+    /* Section 3 */
+    #imgHs h1 {
+        font-size: 2.2rem;
+    }
+
+    #imgHs p {
+        font-size: 1.1rem;
+    }
+
+    .text-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .text-container p {
+        font-size: 1rem;
+    }
+
+    /* Form Section */
+    form {
+        padding: 0.625rem; /* 10px */
+        height: auto;
+    }
+
+    .input-group input {
+        font-size: 0.9rem;
+        padding: 0.5rem; /* 8px */
+    }
+
+    /* Footer */
+    .footer-nav-list li {
+        padding: 0.1875rem; /* 3px */
+    }
+
+    .footer-social a {
+        font-size: 1rem; /* 16px */
+    }
+}
+
+/* Media Query for screens smaller than 400px (Very small devices like small phones) */
+@media (max-width: 400px) {
+
+    /* Hero Section */
+    .hero-content {
+        font-size: 1rem;
+    }
+
+    .hero-content button {
+        width: 5.625rem; /* 90px */
+        height: 1.875rem; /* 30px */
+    }
+
+    /* Section 2 */
+    #section2H {
+        font-size: 1.3rem;
+    }
+
+    .card h2 {
+        font-size: 1.4rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    /* Section 3 */
+    #imgHs h1 {
+        font-size: 2rem;
+    }
+
+    #imgHs p {
+        font-size: 1rem;
+    }
+
+    .text-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .text-container p {
+        font-size: 0.9rem;
+    }
+
+    /* Form Section */
+    form {
+        padding: 0.5rem; /* 8px */
+    }
+
+    .input-group input {
+        font-size: 0.8rem;
+        padding: 0.375rem; /* 6px */
+    }
+
+    /* Footer */
+    .footer-nav-list li {
+        padding: 0.125rem; /* 2px */
+    }
+
+    .footer-social a {
+        font-size: 0.875rem; /* 14px */
+    }
+}
+
+
+/* iPhone SE (1st generation) and iPhone 5/5S/5C (320px) */
+@media only screen and (max-width: 320px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero {
+        height: 20rem; /* Reduced height for smaller screens */
+    }
+
+    .hero-content {
+        font-size: 1.2rem; /* Smaller font size */
+    }
+
+    .card-container {
+        grid-template-columns: 1fr; /* Single column */
+    }
+
+    #section2H {
+        font-size: 1.5rem; /* Smaller section title */
+    }
+
+    .footer-nav-list li {
+        padding: 0.5rem; /* Reduced padding */
+    }
+
+    .footer-social a {
+        font-size: 0.875rem; /* Smaller social link font */
+    }
+}
+
+/* iPhone 6/7/8 (375px) */
+@media only screen and (max-width: 375px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero {
+        height: 25rem; /* Adjusted height */
+    }
+
+    .hero-content {
+        font-size: 1.5rem; /* Slightly smaller */
+    }
+
+    .card-container {
+        grid-template-columns: 1fr; /* Single column */
+    }
+
+    #section2H {
+        font-size: 1.75rem; /* Slightly smaller section title */
+    }
+
+    .footer-nav-list li {
+        padding: 0.5rem; /* Reduced padding */
+    }
+}
+
+/* iPhone 6+/7+/8+ (414px) */
+@media only screen and (max-width: 414px) {
+    .hero {
+        height: 30rem; /* Adjusted height */
+    }
+
+    .hero-content {
+        font-size: 1.75rem; /* Smaller font size */
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+
+    #section2H {
+        font-size: 2rem; /* Adjusted section title */
+    }
+
+    .footer-nav-list li {
+        padding: 0.625rem; /* Slightly larger padding */
+    }
+}
+
+/* iPhone 12/13/14 (390px) */
+@media only screen and (max-width: 390px) {
+    .hero {
+        height: 30rem; /* Adjusted height */
+    }
+
+    .hero-content {
+        font-size: 1.8rem; /* Slightly smaller */
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+
+    #section2H {
+        font-size: 2rem; /* Adjusted section title */
+    }
+
+    .footer-nav-list li {
+        padding: 0.625rem; /* Slightly larger padding */
+    }
+}
+
+/* iPhone 14 Pro Max (430px) */
+@media only screen and (max-width: 430px) {
+    .hero {
+        height: 35rem; /* Adjusted height */
+    }
+
+    .hero-content {
+        font-size: 2rem; /* Adjusted font size */
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+
+    #section2H {
+        font-size: 2.25rem; /* Adjusted section title */
+    }
+
+    .footer-nav-list li {
+        padding: 0.625rem; /* Padding adjustments */
+    }
+}
